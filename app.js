@@ -9,8 +9,8 @@ app.get('/allowUser2', (req, res) => {
   if (req.user.user === 2) return res.status(200).send();
 });
 
-app.listen(4001).on('listening', () => {
-  console.log(`HTTP server listening on port 4001`);
+app.listen(4050).on('listening', () => {
+  console.log(`HTTP server listening on port 4050`);
 });
 
 module.exports = app;
