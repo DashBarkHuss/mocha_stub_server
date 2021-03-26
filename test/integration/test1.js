@@ -1,9 +1,10 @@
-let app;
 const sinon = require('sinon');
-const auth = require('../../auth.js');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const { expect } = chai;
+
+const auth = require('../../auth.js');
+const createAppWithStub = () => require('../../createApp.js')(auth);
 
 chai.use(chaiHttp);
 let server;
@@ -14,7 +15,7 @@ describe('route /allowUser2', () => {
       req.user = { user: 2 };
       next();
     });
-    server = require('../../app.js')();
+    server = createAppWithStub();
     agent = chai.request.agent(server.app);
   });
 
