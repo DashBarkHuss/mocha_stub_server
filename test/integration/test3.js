@@ -17,7 +17,9 @@ describe('route /allowUser2', () => {
     });
   });
   it("shouldn't allow access", async function () {
-    const response = await agent.get('/allowUser2');
-    expect(response.status).to.be.equal(401);
+    const response2 = await chai.request(server.app).post('/allowUser2').send();
+    const response1 = await agent.get('/allowUser2');
+    expect(response2.status).to.be.equal(401);
+    expect(response1.status).to.be.equal(401);
   });
 });
