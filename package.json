@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha --recursive --exit"
+    "test": "cross-env NODE_ENV=test mocha --recursive --exit --require ./test/integration/init.js"
   },
   "author": "",
   "license": "ISC",
