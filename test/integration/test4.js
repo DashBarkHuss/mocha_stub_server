@@ -13,7 +13,6 @@ describe('route /allowUser2', () => {
       req.user = { user: 2 };
       next();
     });
-    application.init(auth);
     agent = chai.request.agent(application.app());
   });
 
