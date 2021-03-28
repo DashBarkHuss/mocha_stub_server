@@ -4,7 +4,7 @@ const { expect } = chai;
 
 chai.use(chaiHttp);
 let agent;
-const application = require('../../createApp.js');
+const application = require('../../application.js');
 
 describe('route /allowUser2', () => {
   before(async () => {

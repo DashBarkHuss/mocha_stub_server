@@ -3,7 +3,7 @@ const chai = require('chai');
 const chaiHttp = require('chai-http');
 const { expect } = chai;
 
-const application = require('../../createApp.js');
+const application = require('../../application.js');
 const auth = require('../../auth.js');
 
 chai.use(chaiHttp);

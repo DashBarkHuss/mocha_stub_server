@@ -1,12 +1,12 @@
 const express = require('express');
+const auth = require('./auth');
 
 const port = 4000;
 
 let server;
 let app;
 
-  const init = (auth) => {
-
+const init = () => {
   app = express();
   app.use((req, res, next) => auth.session(req, res, next));
   app.get('/allowUser2', (req, res) => {
