@@ -7,11 +7,16 @@
     "test": "test"
   },
   "scripts": {
-    "test": "NODE_ENV=test mocha --recursive"
+    "test": "cross-env NODE_ENV=test mocha --recursive --exit --require ./runApplication.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mocha": "^8.3.2"
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
+    "mocha": "^8.3.2",
+    "sinon": "^10.0.0"
   }
 }
